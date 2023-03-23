@@ -1,0 +1,24 @@
+{% extends 'layout.html' %}
+
+{% block title %}{% endblock %}
+
+{% block content %}
+<h1>Chercher un clients suivant sont logement</h1>
+<form method="post" action="">
+    <div class="form-group">
+        <label for="logement-select">Logement:</label>
+
+        <select id="logement-select" name="idclient">
+            <option value="">--Please choose an option--</option>
+            {% for objectlogement in logements %}
+            
+            <option value='{{ objectlogement["id_client"] }}'>{{ objectlogement["id"] }}</option>
+            {% endfor %}
+
+        </select>
+    </div>
+    <br>
+    <button type="submit" class="btn btn-primary">Chercher</button>
+  </form>
+
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends 'layout.html' %}
+
+{% block title %}{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1>Modifier le client {{ client.nom }}</h1>
+  
+
+    <form method="post" action="">
+      <div class="form-group">
+        <label for="nom">Nom :</label>
+        <input type="text" class="form-control" id="nom" name="nom" required  value="{{ client.nom }}">
+      </div>
+      <div class="form-group">
+        <label for="prenom">Prénom :</label>
+        <input type="text" class="form-control" id="prenom" name="prenom" required  value="{{ client.prenom }}">
+      </div>
+      <div class="form-group">
+        <label for="date_de_naissance">Date de naissance :</label>
+        <input type="date" class="form-control" id="date_de_naissance" name="date_de_naissance" required value="{{ client.date_de_naissance }}">
+      </div>
+      <div class="form-group">
+        <label for="numero">Numero :</label>
+        <input type="tel" class="form-control" id="numero" name="numero" required value="{{ client.numero }}">
+      </div>
+      <br>
+      <button type="submit" class="btn btn-primary">Modifier</button>
+    </form>
+  </div>
+  
+
+{% endblock %}

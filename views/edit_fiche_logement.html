@@ -1,0 +1,37 @@
+{% extends 'layout.html' %}
+
+{% block title %}{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1>Modifier le logement {{ logement.id }}</h1>
+  
+  
+    <form method="post" action="">
+      <div class="form-group">
+        <label for="Nom_comune ">Nom de comune :</label>
+        <input type="text" class="form-control" id="nom_comune " name="nom_comune " required  value="{{ logement.nom_comune }}">
+      </div>
+      <div class="form-group">
+        <label for="quartier">Quartier :</label>
+        <input type="text" class="form-control" id="quartier" name="quartier" required value="{{ logement.quartier }}">
+      </div>
+      <div class="form-group">
+        <label for="adresse">Adresse :</label>
+        <input type="text" class="form-control" id="adresse" name="adresse" required value="{{ logement.adresse }}">
+      </div>
+      <div class="form-group">
+        <label for="surface">Surface :</label>
+        <input type="number" class="form-control" id="surface" name="surface" required value="{{ logement.surface }}">
+      </div>
+      <div class="form-group">
+        <label for="loyer">Loyer :</label>
+        <input type="number" class="form-control" id="loyer" name="loyer" required value="{{ logement.loyer }}">
+      </div>
+      <br>
+      <button type="submit" class="btn btn-primary">Ajouter</button>
+    </form>
+  </div>
+  
+
+{% endblock %}
